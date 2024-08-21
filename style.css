@@ -1,0 +1,276 @@
+*{
+    margin:0;
+    padding: 8;
+    font-family: sans-serif;
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/vera.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+.logo{
+    width: 100px;
+    cursor: pointer;
+    height: 50px;
+
+}
+.navbar{
+    width: 85%;
+    height: 15%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+button{
+    color: #fbfcfd;
+    padding: 10px 25px ;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+
+}
+
+
+.side-bar{
+    width: 50px;
+    height: 100vh;
+    background: linear-gradient(#00545d,#000729);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.bubble img{
+    width: 50px;
+    animation: bubbles 7s linear infinite ;
+}
+.bubble{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -70px;
+}
+@keyframes bubbles{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+        
+        opacity: 1;
+    }
+    70%{
+        
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+}
+.bubble img:nth-child(1){
+    animation-delay: 2s ;
+    width: 25px;
+}
+.bubble img:nth-child(2){
+    animation-delay: 1s ;
+}
+.bubble img:nth-child(3){
+    animation-delay: 3s ;
+    width: 25px;
+}
+.bubble img:nth-child(4){
+    animation-delay: 4.5s ;
+}
+.bubble img:nth-child(5){
+    animation-delay: 3s ;
+}
+.bubble img:nth-child(6){
+    animation-delay: 6s ;
+    width: 20px;
+}
+.bubble img:nth-child(7){
+    animation-delay: 7s ;
+    width: 35px;
+
+}
+.content{
+    position: relative;
+}
+.content h2{
+    position: absolute;
+    color: #fff;
+    font-size: 4em;
+}
+.content h2:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 2px #03a9f4;
+}
+.content h2:nth-child(2){
+    color: #03a9f4;
+    animation: animate 2s ease-in-out infinite;
+}
+@keyframes animate{
+    0%,100%{
+        clip-path: polygon(1% 39%, 18% 37%, 36% 41%, 58% 51%, 85% 49%, 99% 40%, 99% 99%, 2% 98%);
+
+    }
+    50%{
+        clip-path: polygon(0% 56%, 21% 56%, 39% 56%, 59% 49%, 72% 40%, 83% 35%, 98% 35%, 99% 99%, 1% 99%);
+    }
+}
+#cat{
+    
+}
+.openbtn {
+    font-size: 18px; /* Font size for smaller button */
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px; /* Padding for smaller button */
+    border-radius: 4px;
+    position: fixed;
+    top: 75px;
+    right: 50px; /* Keep the button at the right edge */
+    z-index: 1001;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for visibility */
+    display: flex; /* Use flexbox for centering the text */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+}
+
+
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: -250px; /* Start off-screen */
+    background-color: #343a40;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    color: #fff;
+    z-index: 1000;
+}
+
+.sidebar a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #495057;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 16px;
+    font-size: 30px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+.deoc {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0; /* Removed the gap between elements */
+}
+
+#cena {
+    position: relative;
+    background: #007bff; /* Background color */
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2em; /* Font size */
+    letter-spacing: 0.1em;
+    padding: 12px 36px; /* Padding */
+    transition: .5s;
+    border-radius: 8px; /* Border-radius */
+    border: none; /* Removed borders */
+    display: inline-flex; /* Inline-flex for proper sizing */
+    align-items: center;
+    justify-content: center;
+    margin: 0; /* Removed margins */
+}
+
+#cena:hover {
+    background: var(--clr);
+    color: #fff;
+    box-shadow: 0 0 20px var(--clr);
+    letter-spacing: 0.15em; /* Hover effect on letter spacing */
+}
+
+#cena::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #27282c;
+    border-radius: 8px; /* Border-radius */
+}
+
+#cena span {
+    position: relative;
+    z-index: 1;
+}
+
+#cena i {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+#cena i::before,
+#cena i::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 5px;
+    border: 2px solid var(--clr);
+    background: #27282c;
+    transition: .5s;
+    border-radius: 2px; /* Rounded elements */
+}
+
+#cena i::before {
+    top: -3.5px;
+    left: 80%;
+    transform: translateX(-50%);
+}
+
+#cena i::after {
+    bottom: -3.5px;
+    left: 20%;
+    transform: translateX(-50%);
+}
+
+#cena:hover i::before {
+    left: 20%;
+}
+
+#cena:hover i::after {
+    left: 80%;
+}
